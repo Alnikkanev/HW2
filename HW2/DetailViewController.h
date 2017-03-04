@@ -10,4 +10,6 @@
 
 @interface DetailViewController : UIViewController
 
+@property(copy) UIImage *detailImage;
+
 @end

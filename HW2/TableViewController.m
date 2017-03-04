@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-
+#import "DetailViewController.h"
 @interface TableViewController ()
 
 @end
@@ -44,95 +44,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifire" forIndexPath:indexPath];
-    
-//    NSUInteger number;
-//    
-//    for (number=1; number<12; number++) {
-//        
-//        switch (number) {
-//            case 1:
-//    
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                continue;
-//                
-//            case 2:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//                return cell;
-//                break;
-//            case 3:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                break;
-//                
-//            case 4:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//                return cell;
-//                break;
-//            case 5:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                break;
-//                
-//            case 6:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//               return cell;
-//                break;
-//            case 7:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                break;
-//                
-//            case 8:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//                return cell;
-//                break;
-//            case 9:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                break;
-//                
-//            case 10:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//                return cell;
-//                break;
-//            case 11:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"1"];
-//                return cell;
-//                break;
-//                
-//            case 12:
-//                cell.textLabel.text=[NSString stringWithFormat:@"Cell#%lu",indexPath.row];
-//                cell.detailTextLabel.text =@"More..";
-//                cell.imageView.image =[UIImage imageNamed:@"2"];
-//                return cell;
-//                break;
-//        }
-//    }
-//    return cell;
-//}
+
     cell.textLabel.text=[NSString stringWithFormat:@"Picture: %lu",indexPath.row];
     cell.detailTextLabel.text =@"More..";
     switch (indexPath.row) {
@@ -176,11 +88,62 @@
         default:
             break;
     }
-//    cell.imageView.image =[UIImage imageNamed:@"1"];
     
     return cell;
     
    
+}
+
+#pragma mark Segue
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell*)sender
+{
+    if ([segue.identifier isEqualToString:@"detailSegue"]){
+        DetailViewController *detail = segue.destinationViewController;
+        NSIndexPath *index = [self.tableView indexPathForCell:sender];
+        switch (index.row) {
+            case 1:
+               detail.detailImage =[UIImage imageNamed:@"1"];
+                break;
+            case 2:
+                detail.detailImage =[UIImage imageNamed:@"2"];
+                break;
+            case 3:
+                detail.detailImage =[UIImage imageNamed:@"3"];
+                break;
+            case 4:
+                detail.detailImage =[UIImage imageNamed:@"4"];
+                break;
+            case 5:
+                detail.detailImage =[UIImage imageNamed:@"5"];
+                break;
+            case 6:
+                detail.detailImage =[UIImage imageNamed:@"6"];
+                break;
+            case 7:
+                detail.detailImage =[UIImage imageNamed:@"7"];
+                break;
+            case 8:
+                detail.detailImage =[UIImage imageNamed:@"8"];
+                break;
+            case 9:
+                detail.detailImage =[UIImage imageNamed:@"9"];
+                break;
+            case 10:
+                detail.detailImage =[UIImage imageNamed:@"10"];
+                break;
+            case 11:
+                detail.detailImage =[UIImage imageNamed:@"11"];
+                break;
+            case 0:
+                detail.detailImage =[UIImage imageNamed:@"12"];
+                break;
+                
+            default:
+                break;
+        }
+       
+    }
 }
 
 

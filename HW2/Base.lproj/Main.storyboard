@@ -45,6 +45,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="DetaleLabel" destination="5kv-W0-W7v" id="Cyl-v8-jfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSq-33-ux9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +86,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CYW-L1-DxN" kind="show" id="vGv-je-cvm"/>
+                                    <segue destination="CYW-L1-DxN" kind="show" identifier="detailSegue" id="vGv-je-cvm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
