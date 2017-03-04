@@ -13,6 +13,7 @@
 		30A167861E6AFB03005F46C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A167841E6AFB03005F46C1 /* Main.storyboard */; };
 		30A167881E6AFB03005F46C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A167871E6AFB03005F46C1 /* Assets.xcassets */; };
 		30A1678B1E6AFB03005F46C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A167891E6AFB03005F46C1 /* LaunchScreen.storyboard */; };
+		30A167941E6AFB62005F46C1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A167931E6AFB62005F46C1 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		30A167871E6AFB03005F46C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A1678A1E6AFB03005F46C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A1678C1E6AFB03005F46C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A167921E6AFB62005F46C1 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		30A167931E6AFB62005F46C1 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				30A167811E6AFB03005F46C1 /* ViewController.h */,
 				30A167821E6AFB03005F46C1 /* ViewController.m */,
 				30A167841E6AFB03005F46C1 /* Main.storyboard */,
+				30A167921E6AFB62005F46C1 /* TableViewController.h */,
+				30A167931E6AFB62005F46C1 /* TableViewController.m */,
 				30A167871E6AFB03005F46C1 /* Assets.xcassets */,
 				30A167891E6AFB03005F46C1 /* LaunchScreen.storyboard */,
 				30A1678C1E6AFB03005F46C1 /* Info.plist */,
@@ -153,6 +158,7 @@
 				30A167831E6AFB03005F46C1 /* ViewController.m in Sources */,
 				30A167801E6AFB03005F46C1 /* AppDelegate.m in Sources */,
 				30A1677D1E6AFB03005F46C1 /* main.m in Sources */,
+				30A167941E6AFB62005F46C1 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
