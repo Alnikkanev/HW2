@@ -96,6 +96,10 @@
 
 #pragma mark Segue
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender NS_AVAILABLE_IOS(5_0);
+//
+//  View controllers will receive this message during segue unwinding. The default implementation returns the result of -respondsToSelector: - controllers can override this to perform any ancillary checks, if necessary.
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell*)sender
 {
     if ([segue.identifier isEqualToString:@"detailSegue"]){
